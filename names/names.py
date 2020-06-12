@@ -25,15 +25,23 @@ duplicates = []  # Return the list of duplicates in this data structure
 
 # BST
 
-# new runtime using BST: 0.06677579879760742 seconds
-binary = BSTNode(names_1[0])
+# new runtime using BST: 0.07176709175109863 seconds
+# MVP
+# binary = BSTNode(names_1[0])
 
-for name in names_1:  # checks if name is in list
-    binary.insert(name)
+# for name in names_1:  # checks if name is in list
+#     binary.insert(name)
 
-for name2 in names_2:  # checks if name is in list
-    if binary.contains(name2):
-        duplicates.append(name2)  # appends duplicates
+# for name2 in names_2:  # checks if name is in list
+#     if binary.contains(name2):
+#         duplicates.append(name2)  # appends duplicates
+
+
+# STRECH using Sets RUNTIME: 0.0049626827239990234 seconds
+# new_set = set(names_1)
+# for name in names_2:
+#     if name in new_set:
+#         duplicates.append(name)
 
 end_time = time.time()
 print(f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
